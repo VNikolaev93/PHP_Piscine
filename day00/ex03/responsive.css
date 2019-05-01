@@ -1,0 +1,65 @@
+html {
+background: url("https://pixelz.cc/wp-content/uploads/2017/12/breaking-bad-walter-white-and-jesse-pinkman-uhd-4k-wallpaper.jpg") no-repeat center center fixed;
+-webkit-background-size: cover; /* Активация поддержки Flexbox в браузерах */
+-moz-background-size: cover;
+-o-background-size: cover;
+background-size: cover;
+text: aliceblue;
+				}
+				.name {
+					display: flex;
+					flex-direction: row;
+					align-items: center;
+					justify-content: space-between;
+				}
+				.name-left {
+					display: flex;
+					flex-direction: column;
+					align-items: flex-start;
+					justify-content: space-between;	
+				}
+				.name-left-mass {
+					display: flex;
+					flex-direction: column;
+					align-items: flex-end;
+					justify-content: space-between;
+				}
+				.elem-group {
+					width: 100px;
+				}
+				.per-row {
+					height: 1vmin;
+					width: 1vmin;
+				}
+				th, td {
+					width: 5%;
+					font-size: 1vw;
+					height: 60%;
+					border: 1px solid black;
+					border-radius: 10px;   /* Добавляет круглые края к ячейке */
+				}
+				.red {
+					background-color: indianred;
+				}
+				.yellow {
+					background-color: khaki;
+				}
+				.blue {
+					background-color: steelblue;
+					font-size: 1vw;
+				}
+				.green {
+					background-color: yellowgreen;
+					font-size: 1vw;
+				}
+				.mendeleiev {
+					margin: auto;
+					width: 100%;
+					border-collapse: collapse;  /* Отображает только одну линию между ячейками */
+					border-radius: 10px; /* Добавляет круглые края к ячейке */
+				}
+				.add {
+					margin: 20px auto auto;
+					width: 100%;
+					border-collapse: collapse;
+				}

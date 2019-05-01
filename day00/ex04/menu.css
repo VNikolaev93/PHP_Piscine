@@ -1,0 +1,57 @@
+body {
+	margin: auto;
+	padding: 0;
+}
+
+ul {
+	display: block;
+	list-style: none;
+}
+
+ul.menu > li {
+	position: relative;
+	float: left;
+}
+
+ul.menu > li > a {
+	display: block;
+	background-color: orange;
+	text-align: center;
+	padding: 10px 20px 10px 20px;
+	font-size: 20px;
+	color: black;
+}
+
+ul.menu >li > a:hover {
+	background-color: burlywood;
+}
+
+ul.menu2 {
+	display: none;
+	position: absolute;
+	width: 120px;
+	top: 37px;
+	left: 0;
+	background-color: green;
+	border: 1px solid burlywood;  
+} 
+
+ul.menu2 > li {
+	display: block;
+}
+
+ul.menu2 > li > a {
+	display: block;
+	padding: 10px;
+	color: white;
+	background-color: green;
+	text-decoration: none;
+}
+
+ul.menu2 > li > a:hover {
+	text-decoration: line-through;
+} 
+
+ul.menu > li:hover > ul.menu2 {
+	display: block;
+}
