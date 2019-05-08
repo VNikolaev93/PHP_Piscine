@@ -1,0 +1,1 @@
+select MD5(REPLACE(CONCAT(`phone_number`, 42), 7, 9)) as `ft5` from `db_bsharna`.`distrib` where id_distrib = 84;

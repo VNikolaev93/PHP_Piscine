@@ -1,0 +1,2 @@
+SELECT film.id_genre AS 'id_genre', genre.name AS 'name_genre', film.id_distrib AS 'id_distrib', distrib.name AS 'name_distrib', film.title AS 'title_film'
+FROM `db_bsharna`.`film` LEFT JOIN `db_bsharna`.`genre` ON `db_bsharna`.genre.id_genre = `db_bsharna`.film.id_genre LEFT JOIN `db_bsharna`.`distrib` ON `db_bsharna`.distrib.id_distrib = `db_bsharna`.film.id_distrib WHERE film.id_genre BETWEEN 4 AND 8;
