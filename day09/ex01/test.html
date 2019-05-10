@@ -1,0 +1,375 @@
+<!--<!DOCTYPE html>-->
+<!--<html lang="en">-->
+<!--<head>-->
+<!--    <meta charset="UTF-8">-->
+<!--    <title>Calc</title>-->
+<!--    <style>-->
+<!--        body {-->
+<!--            background-color: bisque;-->
+<!--        }-->
+<!--        h1 {-->
+<!--            text-align: center;-->
+<!--            margin: 5px 0 20px 0;-->
+<!--        }-->
+
+<!--        .calc {-->
+<!--            width: 300px;-->
+<!--            /*background-color: skyblue;*/-->
+<!--            margin: 10% auto;-->
+<!--            padding: 75px 50px 50px 50px;-->
+<!--            position: relative;-->
+<!--            /*box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);*/-->
+<!--        }-->
+
+<!--        .btn {-->
+<!--            width: 300px;-->
+<!--            height: 100px;-->
+<!--            /*background-color: skyblue;*/-->
+<!--            /*position: absolute;*/-->
+<!--        }-->
+
+<!--        input, select {-->
+<!--            padding: 6px 12px;-->
+<!--            font-size: 12px;-->
+<!--            margin-bottom: 15px;-->
+<!--            background-color: #ffffff;-->
+<!--            border: #ccc 1px solid;-->
+<!--            border-radius: 5px;-->
+<!--            text-align: center;-->
+<!--        }-->
+
+<!--        input[type='text'] {-->
+<!--            width: 270px;-->
+<!--            height: 30px;-->
+<!--        }-->
+
+<!--        select, input[type='submit'] {-->
+<!--            width: 295px;-->
+<!--            height: 44px;-->
+<!--        }-->
+
+<!--        select {-->
+<!--            text-indent: 130px;-->
+<!--        }-->
+
+<!--    </style>-->
+<!--    &lt;!&ndash;    <script>&ndash;&gt;-->
+<!--    &lt;!&ndash;        // function myFunction() {&ndash;&gt;-->
+<!--    &lt;!&ndash;        //     setInterval(function(){ alert("Hello"); }, 3000);&ndash;&gt;-->
+<!--    &lt;!&ndash;        // }&ndash;&gt;-->
+
+<!--    &lt;!&ndash;        // <span onclick="alert('toto');">Hello</span>&ndash;&gt;-->
+<!--    &lt;!&ndash;    </script>&ndash;&gt;-->
+<!--</head>-->
+<!--<body>-->
+<!--&lt;!&ndash;    <span onmouseover="alert('toto');">Hello</span>&ndash;&gt;-->
+<!--<script>-->
+<!--    var num1;-->
+<!--    var num2;-->
+<!--    var res;-->
+<!--    var znak;-->
+<!--    window.onload = function () {-->
+<!--        znak = document.querySelector("#znak");-->
+<!--        num1 = document.querySelector("#num1");-->
+<!--        num2 = document.querySelector("#num2");-->
+<!--        res = document.querySelector("#res");-->
+<!--        calc.addEventListener("submit", submit);-->
+<!--        // setInterval("alert('Please, use me...')", 30000)-->
+
+<!--        setInterval(function () {-->
+<!--            alert("Please, use me...");-->
+<!--        }, 30000);-->
+<!--    }-->
+
+<!--    function numValid(num1, num2) {-->
+<!--        return num1 === parseInt(num1, 10) && num1 >= 0 && num2 === parseInt(num2, 10) && num2 >= 0;-->
+<!--    }-->
+
+<!--    function submit(event) {-->
+<!--        event.preventDefault();-->
+<!--        var num1 = Number(num1.value);-->
+<!--        var num2 = Number(num2.value);-->
+<!--        if (!numIsValid(num1.value, num2.value)) {-->
+<!--            alert("Error :(");-->
+<!--            return false;-->
+<!--        }-->
+
+<!--        // function plus() {-->
+<!--        //     var num1, num2, result;-->
+<!--        //     num1 = document.getElementById('num1').value;-->
+<!--        //     num1 = parseInt(num1);-->
+<!--        //     num2 = document.getElementById('num2').value;-->
+<!--        //     num2 = parseInt(num2);-->
+<!--        //-->
+<!--        //     result = num1+num2;-->
+<!--        //     document.getElementById('res').innerHTML = result;-->
+<!--        // }-->
+<!--        // function minus() {-->
+<!--        //     var num1, num2, result;-->
+<!--        //     num1 = document.getElementById('num1').value;-->
+<!--        //     num1 = parseInt(num1);-->
+<!--        //     num2 = document.getElementById('num2').value;-->
+<!--        //     num2 = parseInt(num2);-->
+<!--        //-->
+<!--        //     result = num1-num2;-->
+<!--        //     document.getElementById('res').innerHTML = result;-->
+<!--        // }-->
+
+<!--        switch (res.value) {-->
+<!--            case ('plus'):-->
+<!--                result(alert(num1 + num2));-->
+<!--                break;-->
+<!--            case ('umn'):-->
+<!--                result(alert(num1 * num2));-->
+<!--                break;-->
+<!--            case ('del'):-->
+<!--                if (num2 === 0) {-->
+<!--                    result(alert("It’s over 9000!"));-->
+<!--                } else {-->
+<!--                    result(alert(num1 / num2));-->
+<!--                }-->
+<!--                break;-->
+<!--            case ('ost'):-->
+<!--                if (num2 === 0) {-->
+<!--                    result(alert("It’s over 9000!"));-->
+<!--                } else {-->
+<!--                    result(alert(num1 % num2));-->
+<!--                }-->
+<!--                break;-->
+<!--            case ('minus'):-->
+<!--                result(alert(num1 - num2);-->
+<!--                break;-->
+<!--            default:-->
+<!--                result(alert("operation not found"));-->
+<!--                break;-->
+<!--        }-->
+
+
+
+<!--        setInterval(function () {-->
+<!--            alert("Please, use me...");-->
+<!--        }, 3000);-->
+
+<!--</script>-->
+<!--<div class="calc">-->
+<!--    <h1>Calc</h1>-->
+<!--    <div class="btn">-->
+<!--        <input type="text" id="num1"><br>-->
+<!--        <select id="oper">-->
+<!--            <option value="plus()">+</option>-->
+<!--            <option value="minus()">-</option>-->
+<!--            <option value="umn()">*</option>-->
+<!--            <option value="del()">/</option>-->
+<!--            <option value="ost()">%</option>-->
+<!--        </select> <br>-->
+<!--        <input type="text" id="num2"><br>-->
+<!--        <input type="submit" id="submit" value="Try me!">-->
+<!--    </div>-->
+<!--</div>-->
+<!--&lt;!&ndash;<p id="plus">Result</p>&ndash;&gt;-->
+
+
+
+<!--&lt;!&ndash;    <div class="page">&ndash;&gt;-->
+<!--&lt;!&ndash;        <div class="calc">&ndash;&gt;-->
+<!--&lt;!&ndash;            <div class="circle"></div>&ndash;&gt;-->
+<!--&lt;!&ndash;            <h1>Calc</h1>&ndash;&gt;-->
+<!--&lt;!&ndash;            <form action="" id="calc">&ndash;&gt;-->
+<!--&lt;!&ndash;                <input type="text" id="left">&ndash;&gt;-->
+<!--&lt;!&ndash;                <select id="op">&ndash;&gt;-->
+<!--&lt;!&ndash;                    <option value="plus">+</option>&ndash;&gt;-->
+<!--&lt;!&ndash;                    <option value="min">-</option>&ndash;&gt;-->
+<!--&lt;!&ndash;                    <option value="umn">*</option>&ndash;&gt;-->
+<!--&lt;!&ndash;                    <option value="del">/</option>&ndash;&gt;-->
+<!--&lt;!&ndash;                    <option value="ost">%</option>&ndash;&gt;-->
+<!--&lt;!&ndash;                </select>&ndash;&gt;-->
+<!--&lt;!&ndash;                <input type="text" id="right">&ndash;&gt;-->
+<!--&lt;!&ndash;                <input type="submit" id="submit" value="Try me!">&ndash;&gt;-->
+<!--&lt;!&ndash;            </form>&ndash;&gt;-->
+<!--&lt;!&ndash;        </div>&ndash;&gt;-->
+<!--&lt;!&ndash;    </div>&ndash;&gt;-->
+
+<!--</body>-->
+<!--</html>-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Calc</title>
+    <style>
+        body {
+            background-color: bisque;
+        }
+        h1 {
+            text-align: center;
+            margin: 5px 0 20px 0;
+        }
+
+        .calc {
+            width: 300px;
+            /*background-color: skyblue;*/
+            margin: 10% auto;
+            padding: 75px 50px 50px 50px;
+            position: relative;
+            /*box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);*/
+        }
+
+        .btn {
+            width: 300px;
+            height: 100px;
+            /*background-color: skyblue;*/
+            /*position: absolute;*/
+        }
+
+        input, select {
+            padding: 6px 12px;
+            font-size: 12px;
+            margin-bottom: 15px;
+            background-color: #ffffff;
+            border: #ccc 1px solid;
+            border-radius: 5px;
+            text-align: center;
+        }
+
+        input[type='text'] {
+            width: 270px;
+            height: 30px;
+        }
+
+        select, input[type='submit'] {
+            width: 295px;
+            height: 44px;
+        }
+
+        select {
+            text-indent: 130px;
+        }
+
+    </style>
+    <!--    <script>-->
+    <!--        // function myFunction() {-->
+    <!--        //     setInterval(function(){ alert("Hello"); }, 3000);-->
+    <!--        // }-->
+
+    <!--        // <span onclick="alert('toto');">Hello</span>-->
+    <!--    </script>-->
+</head>
+<body>
+<!--    <span onmouseover="alert('toto');">Hello</span>-->
+<script>
+    window.onload = function () {
+        calc = document.querySelector("#calc");
+        left = document.querySelector("#left");
+        right = document.querySelector("#right");
+        op = document.querySelector("#op");
+        calc.addEventListener("submit", submit);
+        // setInterval("alert('Please, use me...')", 30000)
+
+        setInterval(function () {
+            alert("Please, use me...");
+        }, 30000);
+    }
+
+    function numValid(num1, num2) {
+        return num1 === parseInt(num1, 10) && num1 >= 0 && num2 === parseInt(num2, 10) && num2 >= 0;
+    }
+
+    // function plus() {
+    //     var num1, num2, result;
+    //     num1 = document.getElementById('num1').value;
+    //     num1 = parseInt(num1);
+    //     num2 = document.getElementById('num2').value;
+    //     num2 = parseInt(num2);
+    //
+    //     result = num1+num2;
+    //     document.getElementById('res').innerHTML = result;
+    // }
+    // function minus() {
+    //     var num1, num2, result;
+    //     num1 = document.getElementById('num1').value;
+    //     num1 = parseInt(num1);
+    //     num2 = document.getElementById('num2').value;
+    //     num2 = parseInt(num2);
+    //
+    //     result = num1-num2;
+    //     document.getElementById('res').innerHTML = result;
+    // }
+
+    switch (res.value) {
+        case ('plus'):
+            result(alert(num1 + num2));
+            break;
+        case ('umn'):
+            result(alert(num1 * num2));
+            break;
+        case ('del'):
+            if (num2 === 0) {
+                result(alert("It’s over 9000!"));
+            } else {
+                result(alert(num1 / num2));
+            }
+            break;
+        case ('ost'):
+            if (num2 === 0) {
+                result(alert("It’s over 9000!"));
+            } else {
+                result(alert(num1 % num2));
+            }
+            break;
+        case ('minus'):
+            result(alert(num1 - num2);
+            break;
+        default:
+            result(alert("operation not found"));
+            break;
+    }
+
+
+
+    setInterval(function () {
+        alert("Please, use me...");
+    }, 3000);
+
+</script>
+<div class="calc">
+    <h1>Calc</h1>
+    <div class="btn">
+        <input type="text" id="num1"><br>
+        <select id="oper">
+            <option value="plus()">+</option>
+            <option value="minus()">-</option>
+            <option value="umn()">*</option>
+            <option value="del()">/</option>
+            <option value="ost()">%</option>
+        </select> <br>
+        <input type="text" id="num2"><br>
+        <input type="submit" id="submit" value="Try me!">
+    </div>
+</div>
+<!--<p id="plus">Result</p>-->
+
+
+
+<!--    <div class="page">-->
+<!--        <div class="calc">-->
+<!--            <div class="circle"></div>-->
+<!--            <h1>Calc</h1>-->
+<!--            <form action="" id="calc">-->
+<!--                <input type="text" id="left">-->
+<!--                <select id="op">-->
+<!--                    <option value="plus">+</option>-->
+<!--                    <option value="min">-</option>-->
+<!--                    <option value="umn">*</option>-->
+<!--                    <option value="del">/</option>-->
+<!--                    <option value="ost">%</option>-->
+<!--                </select>-->
+<!--                <input type="text" id="right">-->
+<!--                <input type="submit" id="submit" value="Try me!">-->
+<!--            </form>-->
+<!--        </div>-->
+<!--    </div>-->
+
+</body>
+</html>
